@@ -24,23 +24,6 @@ export async function build(): Promise<FastifyInstance> {
 	return fastify
 }
 
-// export const fastify = fastifyServer()
-
-// await fastify.register(cors, {
-// 	credentials: true,
-// 	origin: [/http:\/\/localhost:\d+/],
-// })
-
-// // в данном случае cors не нужен, просто стандартная практика для api
-
-// await fastify.register((api, _, done) => {
-// 	api.get('/:code', getShortUrlRoute)
-
-// 	api.post(`/create`, createShortUrlRoute)
-
-// 	done()
-// })
-
 export async function start() {
 	const fastify = await build()
 
